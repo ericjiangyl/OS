@@ -1,0 +1,7 @@
+CC=gcc
+
+locktest: locktest.o tas.S
+    $(CC) -o locktest locktest.o tas.S
+
+locktest.o: locktest.c
+    $(CC) -c locktest locktest.c tas.S
